@@ -5,6 +5,10 @@ Integration library to use https://jte.gg/[jte] with https://quarkus.io[Quarkus]
 This extension works, but it is **experimental**. See xref:#known-issues[known issues] Contributions
 are welcome to improve it.
 
+== How to use
+
+=== Include the new dependency in you
+
 == Releasing
 
 [source,shell]
