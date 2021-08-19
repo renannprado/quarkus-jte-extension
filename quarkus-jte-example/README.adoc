@@ -1,0 +1,22 @@
+= https://quarkus.io/[Quarkus] + https://github.com/casid/jte[jte] Integration Example
+
+This is an example on how to use the `quarkus-jte-extension`.
+
+Unfortunately doing tests with this extension are broken, but contributions are very welcome.
+
+== Running
+
+First make sure that you have the `quarkus-jte-extension` locally, so go to the root of this
+repository and run:
+
+```shell
+./mvnw clean install
+```
+
+```shell
+./mvnw compile quarkus:dev
+```
+
+== Accessing the endpoint
+
+http://localhost:8080/hello
