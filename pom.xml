@@ -5,7 +5,7 @@
     <!-- sample taken from: https://central.sonatype.org/publish/requirements/#a-complete-example-pom -->
     <groupId>dev.renann</groupId>
     <artifactId>quarkus-jte-parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>quarkus-jte-parent</name>
@@ -38,7 +38,7 @@
         <connection>scm:git:git@github.com/renannprado/quarkus-jte-extension.git</connection>
         <developerConnection>scm:git:git@github.com:renannprado/quarkus-jte-extension.git</developerConnection>
         <url>http://github.com/renannprado/quarkus-jte-extension</url>
-      <tag>v0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
