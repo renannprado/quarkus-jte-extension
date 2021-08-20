@@ -1,3 +1,13 @@
 target/
 *.iml
 .idea/
+
+# maven release files
+pom.xml.releaseBackup
+release.properties
+
+# vscode project files (?)
+.classpath
+.factorypath
+.project
+.settings/

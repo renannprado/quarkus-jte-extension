@@ -5,6 +5,54 @@ Integration library to use https://jte.gg/[jte] with https://quarkus.io[Quarkus]
 This extension works, but it is **experimental**. See xref:#known-issues[known issues] Contributions
 are welcome to improve it.
 
+== Example of how to use
+
+Include the latest version of https://search.maven.org/artifact/dev.renann/quarkus-jte/0.0.1/jar[this dependency]
+in your dependencies file.
+
+.Example
+[source,xml]
+----
+<dependency>
+  <groupId>dev.renann</groupId>
+  <artifactId>quarkus-jte</artifactId>
+  <version>0.0.1</version>
+</dependency>
+----
+
+Sample endpoint using jte:
+
+[source,java]
+----
+package org.acme;
+
+import dev.renann.quarkus.jte.runtime.TemplateRenderer;
+
+import javax.inject.Inject;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import java.util.Collections;
+
+@Path("/hello")
+public class GreetingResource {
+
+    @Inject
+    private TemplateRenderer templateRenderer;
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello() {
+        return templateRenderer.render("example1.jte", Collections.singletonMap(
+            "foo", "bar2212"
+        ));
+    }
+}
+----
+
+**See full example https://github.com/renannprado/quarkus-jte-extension/tree/main/quarkus-jte-example[here]**
+
 == Releasing
 
 [source,shell]
