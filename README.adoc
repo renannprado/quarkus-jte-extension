@@ -51,6 +51,8 @@ public class GreetingResource {
 }
 ----
 
+**See full example https://github.com/renannprado/quarkus-jte-extension/tree/main/quarkus-jte-example[here]**
+
 == Releasing
 
 [source,shell]
