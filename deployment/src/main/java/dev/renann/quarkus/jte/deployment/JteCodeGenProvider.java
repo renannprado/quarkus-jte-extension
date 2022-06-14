@@ -1,7 +1,6 @@
 package dev.renann.quarkus.jte.deployment;
 
 import dev.renann.quarkus.jte.runtime.JteTemplateRenderer;
-import io.quarkus.bootstrap.model.AppDependency;
 import io.quarkus.deployment.CodeGenContext;
 import io.quarkus.deployment.CodeGenProvider;
 import io.quarkus.maven.dependency.ResolvedDependency;
@@ -56,6 +55,6 @@ public class JteCodeGenProvider implements CodeGenProvider {
         if (classPath.length() > 0) {
             classPath.append(File.pathSeparatorChar);
         }
-        classPath.append(path.toAbsolutePath().toString());
+        classPath.append(path.toAbsolutePath());
     }
 }
