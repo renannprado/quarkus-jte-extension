@@ -23,7 +23,7 @@ public class QuarkusJteDevModeTest {
     static final QuarkusDevModeTest unitTest = new QuarkusDevModeTest()
         .setArchiveProducer(() -> {
             JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class);
-            javaArchive.addClass("dev.renann.quarkus.jte.test.DevModeGreetingResource");
+            javaArchive.addClass(DevModeGreetingResource.class);
             return javaArchive;
         });
 
@@ -63,14 +63,13 @@ public class QuarkusJteDevModeTest {
         }
     }
 
-    private Path copy(String file, String content) throws Exception {
+    private void copy(String file, String content) throws Exception {
         Path jteSources = ((Path) deploymentSourcePath.get(unitTest)).getParent().resolve("jte");
 
         try {
             Path resolved = jteSources.resolve(file);
             Files.createDirectories(resolved.getParent());
-            Files.write(resolved, content.getBytes(StandardCharsets.UTF_8));
-            return resolved;
+            Files.writeString(resolved, content, StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }

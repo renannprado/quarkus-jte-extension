@@ -15,7 +15,7 @@ public class QuarkusJteTest {
     static final QuarkusUnitTest unitTest = new QuarkusUnitTest()
         .setArchiveProducer(() -> {
             JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class);
-            javaArchive.addClass("dev.renann.quarkus.jte.test.GreetingResource");
+            javaArchive.addClass(GreetingResource.class);
             javaArchive.addAsResource("greet.jte", "META-INF/resources/greet.jte");
 
             return javaArchive;
