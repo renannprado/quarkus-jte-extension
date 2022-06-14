@@ -67,7 +67,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>2.4.0.Final</quarkus.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-        <jte.version>1.11.2</jte.version>
+        <jte.version>2.0.4</jte.version>
         <!-- my artifact signing key -->
         <gpg.keyname>A9173F8A423FB09F5C8BDACB44B14349FC40AB07</gpg.keyname>
     </properties>
