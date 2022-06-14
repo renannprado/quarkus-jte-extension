@@ -11,3 +11,10 @@ release.properties
 .factorypath
 .project
 .settings/
+
+# Dot file
+.*
+!.gitignore
+!.editorconfig
+!.mvn
+.mvn/wrapper

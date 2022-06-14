@@ -13,7 +13,7 @@ import java.util.Collections;
 public class GreetingResource {
 
     @Inject
-    private TemplateRenderer templateRenderer;
+    TemplateRenderer templateRenderer;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
