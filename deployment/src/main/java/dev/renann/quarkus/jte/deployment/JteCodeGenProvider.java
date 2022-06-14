@@ -4,6 +4,7 @@ import dev.renann.quarkus.jte.runtime.JteTemplateRenderer;
 import io.quarkus.bootstrap.model.AppDependency;
 import io.quarkus.deployment.CodeGenContext;
 import io.quarkus.deployment.CodeGenProvider;
+import io.quarkus.maven.dependency.ResolvedDependency;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -37,13 +38,13 @@ public class JteCodeGenProvider implements CodeGenProvider {
         }
 
         StringBuilder classPath = new StringBuilder(512);
-        for (AppDependency userDependency : context.appModel().getUserDependencies()) {
-            for (Path path : userDependency.getArtifact().getPaths()) {
+        for (ResolvedDependency dependency : context.applicationModel().getRuntimeDependencies()) {
+            for (Path path : dependency.getResolvedPaths()) {
                 appendPath(classPath, path);
             }
         }
 
-        for (Path path : context.appModel().getAppArtifact().getPaths()) {
+        for (Path path : context.applicationModel().getAppArtifact().getResolvedPaths()) {
             appendPath(classPath, path);
         }
 
